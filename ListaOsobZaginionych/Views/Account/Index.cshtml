@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ListaOsobZaginionych.Models.UserAccount>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista wolontariuszy</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConfirmPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsAdmin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConfirmRegistration)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConfirmPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsAdmin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConfirmRegistration)
+        </td>
+        <td>
+            @Html.ActionLink("Edytuj", "Edit", new { id=item.UserId }) |
+            @Html.ActionLink("Usuń", "Delete", new { id=item.UserId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,66 @@
+﻿@model ListaOsobZaginionych.Models.OsobaZaginiona
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Szczegóły osoby zaginionej</h2>
+
+<table>
+    <tr>
+        <td>
+            <b>Imię:</b>
+        </td>
+        <td>
+            @Model.Firstname
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Nazwisko:</b>
+        </td>
+        <td>
+            @Model.Lastname
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Płeć:</b>
+        </td>
+        <td>
+            @Model.Gender
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Wiek:</b>
+        </td>
+        <td>
+            @Model.Age
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Wzrost:</b>
+        </td>
+        <td>
+            @Model.Width
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Kolor oczu: </b>
+        </td>
+        <td>
+            @Model.Eyecolor
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>OStatnia znana lokalizacja:</b>
+        </td>
+        <td>
+            @Model.Lokalizacja
+        </td>
+    </tr>
+</table>
+
